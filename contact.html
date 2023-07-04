@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Footer | Contact</title>
+    <link rel="stylesheet" href="contactstyle.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li onclick="location.href ='home.html';"><a href="#">Home</a></li>
+          <li onclick="location.href ='shop.html';"><a href="#">Shop</a></li>
+          <li><a href="#">Services</a></li>
+          <li onclick="location.href ='contact.html';">
+            <a href="#">Contact</a>
+          </li>
+          <li onclick="location.href ='feedback.html';">
+            <a href="#">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="accordion">
+      <div class="image-box">
+        <img src="/img/heart-shape.jpeg" alt="" />
+      </div>
+      <div class="accordion-text">
+        <div class="title">FAQ</div>
+        <ul class="faq-text">
+          <li>
+            <div class="question-arrow">
+              <span class="question">How do I contact customer support ?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+
+            <p>
+              <br />
+              You can reach our customer support team through various channels.
+              We provide a dedicated customer support phone number, email
+              address, and live chat feature on our website. Our knowledgeable
+              representatives will be happy to assist you with any questions,
+              concerns, or issues you may have.
+            </p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question"> Can I track my delivery?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>
+              <br />Yes, you can track your delivery through our website or
+              mobile app. Once your order is out for delivery, you will receive
+              updates regarding the status and estimated time of arrival. You
+              can also contact our customer support team for any additional
+              assistance.
+            </p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Can I return or exchange items?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>
+              <br />
+              Yes, we have a return and exchange policy in place. If you are
+              unsatisfied with an item, please contact our customer support
+              within a specified time frame, usually within 24 to 48 hours of
+              delivery. We will assist you with the return or exchange process
+              based on the specific circumstances.
+            </p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">How to place an order?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>result.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question"
+                >What if an item I ordered is out of stock?</span
+              >
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+
+            <p>
+              <br />
+              We strive to keep our inventory up to date, but occasionally,
+              items may be out of stock due to high demand or other factors. If
+              an item you ordered is out of stock, we will do our best to notify
+              you as soon as possible. We may suggest a suitable substitute or
+              offer a refund or credit for the unavailable item.
+            </p>
+            <span class="line"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      let li = document.querySelectorAll(".faq-text li");
+      for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener("click", (e) => {
+          let clickedLi;
+          if (e.target.classList.contains("question-arrow")) {
+            clickedLi = e.target.parentElement;
+          } else {
+            clickedLi = e.target.parentElement.parentElement;
+          }
+          clickedLi.classList.toggle("showAnswer");
+        });
+      }
+    </script>
+
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <i class="fab fa-slack"></i>
+            <span class="logo_name">Contact</span>
+          </div>
+          <div class="media-icons"></div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Company</li>
+            <li><a onclick="location.href ='home.html';">Home</a></li>
+            <li><a onclick="location.href ='contact.html';">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a onclick="location.href ='feedback.html';">Feedback</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">...</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Account</li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Prefrences</a></li>
+            <li><a href="#">Purchase</a></li>
+          </ul>
+
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li>
+              <input
+                type="button"
+                onclick="alert('Successfull bruh!!')"
+                value="Subscribe" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright &#169; 2021 <a href="#">Zero.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
